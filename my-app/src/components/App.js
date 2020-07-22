@@ -1,14 +1,15 @@
 import React from 'react';
-
 import About from './About';
+import Home from './Home';
 import '../css/App.css';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Conway's Game of Life!</h1>
-        <About />
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
       </header>
     </div>
   );
