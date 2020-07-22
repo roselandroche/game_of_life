@@ -11,7 +11,6 @@ Build Week for Lambda School - Conway's Game of Life
 - Correctly analyze the ‘Turing Completeness’ of Conway’s “Game of Life”
 - Utilize "double buffering" to implement the game
 
-
 ## What problem does it solve?
 
 
