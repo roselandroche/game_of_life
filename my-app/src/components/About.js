@@ -1,8 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function About() {
     return (
         <div>
+            <Link to='/'>
+                <a href='/'>Home</a>
+            </Link>
+
             <h1>About</h1>
 
             <h3>What is it?</h3>
