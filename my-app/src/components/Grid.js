@@ -7,7 +7,7 @@ function Grid() {
     const [grid, setGrid] = useState(() => {
         const rows = []
         for(let i = 0; i < numRows; i++) {
-            rows[i] = Array(numCol - 1).fill(0);
+            rows[i] = Array(numCol).fill(0);
         }
         return rows;
     })
