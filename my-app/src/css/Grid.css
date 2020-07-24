@@ -1,0 +1,11 @@
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 1px;
+}
+
+.grid-container {
+    display: grid;
+    margin: 20px;
+}
