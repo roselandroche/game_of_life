@@ -4,16 +4,13 @@ import '../css/ButtonBar.css';
 function ButtonBar(props) {
 
     const startProgram = () => {
-        if(!props.running) {
-            props.setRunning(true)
-        }
+        props.setRunning(true)
+        props.runningRef.current = true;
         props.runGame()
     }
 
     const stopProgram = () => {
-        if(props.running) {
-            props.setRunning(false)
-        }
+        props.setRunning(false)
         console.log(`Game terminated.`)
     }
 
