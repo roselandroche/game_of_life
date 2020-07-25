@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import '../css/Grid.css';
 import produce from 'immer';
 import ButtonBar from './ButtonBar';
@@ -14,6 +14,23 @@ function Grid() {
         }
         return rows;
     })
+    const [running, setRunning] = useState(false)
+
+    /*
+        determine what current cell is
+        determine how many neighbors are living
+        if current cell is dead (equal to 0) AND has exactly 3 living neighbors:
+            it comes to life (is reset to 1)
+        if current cell is alive (equal to 1) AND has 2 OR 3 living neighbors:
+            it stays alive (equal to 1)
+        else:
+            it dies/stays dead (equal to 0)
+        */
+
+    const runGame = useCallback(() => {
+        
+    }, [])
+
     return (
         <>
             <div 
@@ -37,7 +54,7 @@ function Grid() {
                         />
                     ))}
             </div>
-            <ButtonBar />
+            <ButtonBar running = { running } setRunning = { setRunning } runGame = { runGame } />
         </>
     )
 }

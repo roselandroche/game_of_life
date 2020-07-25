@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../css/ButtonBar.css';
 
-function ButtonBar() {
-    const [running, setRunning] = useState(false)
+function ButtonBar(props) {
 
     const startProgram = () => {
-        if(!running) {
-            setRunning(true)
+        if(!props.running) {
+            props.setRunning(true)
         }
-        console.log(running)
+        props.runGame()
     }
 
     const stopProgram = () => {
-        if(running) {
-            setRunning(false)
+        if(props.running) {
+            props.setRunning(false)
         }
-        console.log(running)
+        console.log(`Game terminated.`)
     }
 
     const clearGrid = () => {
