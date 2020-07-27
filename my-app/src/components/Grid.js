@@ -83,7 +83,7 @@ function Grid() {
                     gridTemplateColumns: `repeat(${numCol}, auto)`,
                 }}
             >
-                {grid.map((rows, i) => 
+                {!running ? grid.map((rows, i) => 
                     rows.map((col, j) => 
                         <div 
                             className='cell' 
@@ -96,7 +96,16 @@ function Grid() {
                                 setGrid(newGrid)
                             }}
                         />
-                    ))}
+                    )) : grid.map((rows, i) => 
+                        rows.map((col, j) => 
+                            <div 
+                                className='cell' 
+                                key={`${i}-${j}`}
+                                style={{backgroundColor: grid[i][j] ? "white": "#2C0A28"}}
+                            />
+                        )
+                    )
+                }
             </div>
             <ButtonBar 
                 running = { running } 
