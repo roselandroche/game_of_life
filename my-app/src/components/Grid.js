@@ -60,6 +60,21 @@ function Grid() {
         setTimeout(runGame, 1000)
     }, [])
 
+    const clearGrid = () => {
+        if(runningRef.current) {
+            return
+        }
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                for(let i = 0; i < numRows; i++) {
+                    for(let j = 0; j < numCol; j++) {
+                        gridCopy[i][j] = 0;
+                    }
+                }
+            })
+        })
+    }
+
     return (
         <>
             <div 
@@ -83,7 +98,13 @@ function Grid() {
                         />
                     ))}
             </div>
-            <ButtonBar running = { running } setRunning = { setRunning } runGame = { runGame } runningRef = { runningRef }/>
+            <ButtonBar 
+                running = { running } 
+                setRunning = { setRunning } 
+                runGame = { runGame } 
+                runningRef = { runningRef }
+                clearGrid = { clearGrid }
+            />
         </>
     )
 }

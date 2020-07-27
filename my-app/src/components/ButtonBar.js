@@ -16,6 +16,7 @@ function ButtonBar(props) {
 
     const clearGrid = () => {
         console.log(`Clearing the grid...`)
+        props.clearGrid()
     }
 
     return (
