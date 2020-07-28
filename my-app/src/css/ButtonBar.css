@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.start, .stop, .clear, .step{
+.start, .stop, .clear, .step, .random {
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px 30px;

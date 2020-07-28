@@ -67,6 +67,22 @@ function Grid() {
         setTimeout(runGame, 1000)
     }, [])
 
+    const randomGrid = () => {
+        if(runningRef.current) {
+            return
+        }
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                for(let i = 0; i < numRows; i++) {
+                    for(let j = 0; j < numCol; j++) {
+                        gridCopy[i][j] = Math.round(Math.random());
+                    }
+                }
+            })
+        })
+        genNumberRef.current = 0;
+    }
+
     const clearGrid = () => {
         if(runningRef.current) {
             return
@@ -124,6 +140,7 @@ function Grid() {
                 runningRef = { runningRef }
                 clearGrid = { clearGrid }
                 stepThrough = { stepThrough }
+                randomGrid = { randomGrid }
             />
             <div 
                 className='grid-container'
