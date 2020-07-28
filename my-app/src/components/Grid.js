@@ -122,7 +122,7 @@ function Grid() {
                 runningRef = { runningRef }
                 clearGrid = { clearGrid }
             />
-            <p>{ genNumberRef.current }</p>
+            <p>Generation Number: { genNumberRef.current }</p>
         </>
     )
 }
