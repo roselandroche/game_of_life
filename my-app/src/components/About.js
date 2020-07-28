@@ -1,14 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import '../css/About.css';
+
 function About() {
     return (
-        <div>
-            <Link to='/'>
-                <a href='/'>Home</a>
-            </Link>
+        <div className='about'>
+            <div className='about-header'>
+                <h1>About</h1>
 
-            <h1>About</h1>
+                <Link to='/'>
+                    <a href='/' className='home-link'>Home</a>
+                </Link>
+            </div>
 
             <h3>What is it?</h3>
             <p>It is a cellular automaton developed by John Conway in 1970. It is a 0 player game - aside from the 

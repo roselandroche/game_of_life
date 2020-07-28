@@ -116,7 +116,15 @@ function Grid() {
     }, [])
 
     return (
-        <>
+        <div className='main-body'>
+            <ButtonBar 
+                running = { running } 
+                setRunning = { setRunning } 
+                runGame = { runGame } 
+                runningRef = { runningRef }
+                clearGrid = { clearGrid }
+                stepThrough = { stepThrough }
+            />
             <div 
                 className='grid-container'
                 style={{
@@ -147,16 +155,9 @@ function Grid() {
                     )
                 }
             </div>
-            <ButtonBar 
-                running = { running } 
-                setRunning = { setRunning } 
-                runGame = { runGame } 
-                runningRef = { runningRef }
-                clearGrid = { clearGrid }
-                stepThrough = { stepThrough }
-            />
-            <p>Generation Number: { genNumberRef.current }</p>
-        </>
+            
+            <p className='gen'>Generation Number: { genNumberRef.current }</p>
+        </div >
     )
 }
 

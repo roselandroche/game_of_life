@@ -1,6 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
 .about-link {
     color: white;
     text-decoration: none;
-    text-align: left;
-    display: block;
+    font-size: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
 }

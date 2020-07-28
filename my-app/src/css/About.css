@@ -1,0 +1,23 @@
+.about {
+    display: block;
+    background-color: #282c34;
+    height: 100vh;
+    width: 600px;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+.about-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: right;
+}
