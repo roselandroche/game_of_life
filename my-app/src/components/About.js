@@ -14,8 +14,8 @@ function About() {
                 </Link>
             </div>
 
-            <h3>What is it?</h3>
-            <p>It is a cellular automaton developed by John Conway in 1970. It is a 0 player game - aside from the 
+            <h3>What is Conway's Game of Life?</h3>
+            <p>It is a cellular automaton developed by John Conway in 1970. It is a 0 player game - meaning that aside from the 
                 initial configuration no user input is required. The state changes and evolves on its own.
                 It is composed of a grid of cells that follow rules from which complex behaviors can emerge.</p>
             
@@ -23,7 +23,7 @@ function About() {
             <p>This can be used in simulations for biological or chemical or other scenarios, to assist in research.</p>
             
             <h3>How is Turing Completeness related?</h3>
-            <p>A computing system is Turing Complete if it is capable of performing arbitrary, general purpose computation.
+            <p>A computing system is thought to be Turing Complete if it is capable of performing arbitrary, general purpose computation.
                 Conway's Game of Life is a computing system that qualifies.</p>
             
             <h3>What are the rules?</h3>

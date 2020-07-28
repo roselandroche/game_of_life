@@ -156,7 +156,7 @@ function Grid() {
                 }
             </div>
             
-            <p className='gen'>Generation Number: { genNumberRef.current }</p>
+            <p className='gen'>Generation Number:<br/>{ genNumberRef.current }</p>
         </div >
     )
 }
