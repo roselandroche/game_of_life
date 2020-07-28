@@ -26,8 +26,12 @@ function Grid() {
         return rows;
     })
     const [running, setRunning] = useState(false);
+
     const runningRef = useRef(running);
     runningRef.current = running;
+
+    let genNumber = 0;
+    let genNumberRef = useRef(genNumber);
 
     const runGame = useCallback(() => {
         if(!runningRef.current) {
@@ -56,7 +60,10 @@ function Grid() {
                 }
             })
         })
-        
+
+        genNumberRef.current++;
+        console.log(genNumberRef);
+
         setTimeout(runGame, 1000)
     }, [])
 
@@ -73,6 +80,7 @@ function Grid() {
                 }
             })
         })
+        genNumberRef.current = 0;
     }
 
     return (
@@ -114,6 +122,7 @@ function Grid() {
                 runningRef = { runningRef }
                 clearGrid = { clearGrid }
             />
+            <p>{ genNumberRef.current }</p>
         </>
     )
 }
