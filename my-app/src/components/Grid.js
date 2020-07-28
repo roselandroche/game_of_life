@@ -83,6 +83,38 @@ function Grid() {
         genNumberRef.current = 0;
     }
 
+    const stepThrough = useCallback(() => {
+        if(!runningRef.current) {
+            return
+        }
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                for(let i = 0; i < numRows; i++) {
+                    for(let j = 0; j < numCol; j++) {
+                        let neighbors = 0;
+                        neighborCells.forEach(([x, y]) => {
+                            const newI = i + x;
+                            const newJ = j + y;
+                            if(newI >= 0 && newI < numRows && newJ >= 0 && newJ < numCol) {
+                                neighbors += currentGrid[newI][newJ]
+                            }
+                        })
+                        if(!currentGrid[i][j] && neighbors === 3) {
+                            gridCopy[i][j] = 1;
+                        } else if(currentGrid[i][j] && neighbors >= 2 && neighbors <= 3) {
+                            gridCopy[i][j] = 1;
+                        } else {
+                            gridCopy[i][j] = 0;
+                        }
+                    }
+                }
+            })
+        })
+
+        genNumberRef.current++;
+        console.log(genNumberRef);
+    }, [])
+
     return (
         <>
             <div 
@@ -121,6 +153,7 @@ function Grid() {
                 runGame = { runGame } 
                 runningRef = { runningRef }
                 clearGrid = { clearGrid }
+                stepThrough = { stepThrough }
             />
             <p>Generation Number: { genNumberRef.current }</p>
         </>

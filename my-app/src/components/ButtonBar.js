@@ -4,25 +4,44 @@ import '../css/ButtonBar.css';
 function ButtonBar(props) {
 
     const startProgram = () => {
-        props.setRunning(true)
-        props.runningRef.current = true;
-        props.runGame()
+        if(!props.running){
+            props.setRunning(true)
+            props.runningRef.current = true;
+            props.runGame()
+        }
+    }
+
+    const stepping = () => {
+        if(!props.running) {
+            props.setRunning(true)
+            props.runningRef.current = true;
+            props.stepThrough()
+            props.setRunning(false)
+            props.runningRef.current = false
+        }
     }
 
     const stopProgram = () => {
-        props.setRunning(false)
-        console.log(`Game terminated.`)
+        if(props.running) {
+            props.setRunning(false)
+            console.log(`Game terminated.`)
+        }
     }
 
     const clearGrid = () => {
-        console.log(`Clearing the grid...`)
-        props.clearGrid()
+        if(!props.running){
+            console.log(`Clearing the grid...`)
+            props.clearGrid()
+        }
     }
 
     return (
         <div className='bar'>
             <button className='start' onClick={() => {startProgram()}}>
                 Start
+            </button>
+            <button className='step' onClick={() => {stepping()}}>
+                Step
             </button>
             <button className='stop' onClick={() => {stopProgram()}}>
                 Stop
