@@ -222,7 +222,7 @@ function Grid() {
             </div>
             <div className='right-panel'>
                 <p className='gen'>
-                    Generation:<br/>
+                    Generation<br/>
                     { genNumberRef.current }
                 </p>
                 <ButtonRight 
