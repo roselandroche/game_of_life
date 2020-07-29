@@ -1,5 +1,5 @@
 import React from 'react';
-import Presets from '../css/Presets.css';
+import '../css/Presets.css';
 
 function PreSets(props) {
     const setGlider = () => {
