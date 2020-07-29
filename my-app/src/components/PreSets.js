@@ -5,7 +5,7 @@ function PreSets(props) {
         if(props.running) {
             return
         }
-
+        props.glider()
     }
     const setToad = () => {
         if(props.running) {
@@ -17,18 +17,18 @@ function PreSets(props) {
         if(props.running) {
             return
         }
-
+        props.penta()
     }
 
     return (
         <div>
-            <button className='glider'>
+            <button className='glider' onClick={() => {setGlider()}}>
                 Glider
             </button>
             <button className='toad' onClick={() => {setToad()}}>
                 Toad
             </button>
-            <button className='pentadecathlon'>
+            <button className='pentadecathlon' onClick={() => {setPent()}}>
                 Pentadecathlon
             </button>
         </div>

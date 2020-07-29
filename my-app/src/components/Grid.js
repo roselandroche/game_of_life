@@ -148,6 +148,38 @@ function Grid() {
         })
     }
 
+    const glider = () => {
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                for(let i = 10; i < 13; i++) {
+                    gridCopy[i][10] = 1;
+                }
+                gridCopy[12][11] = 1;
+                gridCopy[11][12] = 1;
+            })
+        })
+    }
+
+    const penta = () => {
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                for(let i = 7; i < 9; i++) {
+                    gridCopy[10][i] = 1;
+                }
+                for(let i = 10; i < 14; i++) {
+                    gridCopy[10][i] = 1;
+                }
+                for(let i = 15; i < 17; i++) {
+                    gridCopy[10][i] = 1;
+                }
+                gridCopy[11][9] = 1;
+                gridCopy[9][9] = 1;
+                gridCopy[11][14] = 1;
+                gridCopy[9][14] = 1;
+            })
+        })
+    }
+
     return (
         <div className='main-body'>
             <ButtonBar 
@@ -191,7 +223,7 @@ function Grid() {
             </div>
 
             <p className='gen'>Generation:<br/>{ genNumberRef.current }</p>
-            <PreSets toad={ toad } />
+            <PreSets toad={ toad } glider={ glider } penta={ penta } />
         </div >
     )
 }
