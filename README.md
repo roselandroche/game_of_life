@@ -13,9 +13,18 @@ Build Week for Lambda School - Conway's Game of Life
 
 ### What problem does it solve?
 
+- Visualization of an important piece of programming history.
+
 ### Stand out difficulties and solutions
 
+- Double buffering was a new concept for me. I utilized the 'immer' library so that I could mutate a copy
+    of the data, then proceed to change the actual state when the copy was complete.
+
 ### TODO list/wishlist. What would I add if I had more time?
+
+- I would add more presets for the user to choose from, as well as adding ways for the user to change the
+    visual appearance(i.e. colors). I would also like to add the ability to 'jump' to different generations, 
+    so the user could see the end result without having to wait for the game to play to that point.
 
 ### Deployment
 

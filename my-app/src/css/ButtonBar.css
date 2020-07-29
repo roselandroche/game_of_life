@@ -1,10 +1,10 @@
-.bar {
+.bar, .preset-buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.start, .stop, .clear, .step, .random {
+.start, .stop, .clear, .step, .random, .glider, .toad, .pentadecathlon {
     border: 2px solid white;
     border-radius: 10px;
     padding: 10px 30px;
