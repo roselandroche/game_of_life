@@ -26,3 +26,8 @@
     margin-right: 80px;
     padding-bottom: 50px;
 }
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+}

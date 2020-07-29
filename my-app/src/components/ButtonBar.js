@@ -35,6 +35,13 @@ function ButtonBar(props) {
         }
     }
 
+    const randomize = () => {
+        if(!props.running) {
+            console.log(`Creating random configuration...`)
+            props.randomGrid()
+        }
+    }
+    
     return (
         <div className='bar'>
             <button className='start' onClick={() => {startProgram()}}>
@@ -48,6 +55,9 @@ function ButtonBar(props) {
             </button>
             <button className='clear' onClick={() => {clearGrid()}}>
                 Clear
+            </button>
+            <button className='random' onClick={() => {randomize()}}>
+                Random
             </button>
         </div>
     )
