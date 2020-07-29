@@ -13,8 +13,10 @@ Build Week for Lambda School - Conway's Game of Life
 
 ### What problem does it solve?
 
-
 ### Stand out difficulties and solutions
 
-
 ### TODO list/wishlist. What would I add if I had more time?
+
+### Deployment
+
+- Deployed via Netlify at: https://awesome-ramanujan-7d7ef5.netlify.app/
