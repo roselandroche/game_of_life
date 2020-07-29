@@ -221,9 +221,10 @@ function Grid() {
                     )
                 }
             </div>
-
-            <p className='gen'>Generation:<br/>{ genNumberRef.current }</p>
-            <PreSets toad={ toad } glider={ glider } penta={ penta } />
+            <div className='right-panel'>
+                <p className='gen'>Generation:<br/>{ genNumberRef.current }</p>
+                <PreSets toad={ toad } glider={ glider } penta={ penta } />
+            </div>
         </div >
     )
 }

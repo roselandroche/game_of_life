@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Presets from '../css/Presets.css';
 
 function PreSets(props) {
     const setGlider = () => {
@@ -21,7 +22,7 @@ function PreSets(props) {
     }
 
     return (
-        <div>
+        <div className='preset-buttons'>
             <button className='glider' onClick={() => {setGlider()}}>
                 Glider
             </button>
