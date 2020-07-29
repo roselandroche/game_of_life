@@ -1,12 +1,11 @@
 import React, { useState, useCallback, useRef } from 'react';
 import '../css/Grid.css';
 import produce from 'immer';
-import ButtonBar from './ButtonBar';
-import PreSets from './PreSets';
+import ButtonLeft from './ButtonLeft';
+import ButtonRight from './ButtonRight';
 
 const numRows = 25;
 const numCol = 25;
-
 const neighborCells = [
     [0, 1],
     [0, -1],
@@ -182,7 +181,7 @@ function Grid() {
 
     return (
         <div className='main-body'>
-            <ButtonBar 
+            <ButtonLeft 
                 running = { running } 
                 setRunning = { setRunning } 
                 runGame = { runGame } 
@@ -222,8 +221,15 @@ function Grid() {
                 }
             </div>
             <div className='right-panel'>
-                <p className='gen'>Generation:<br/>{ genNumberRef.current }</p>
-                <PreSets toad={ toad } glider={ glider } penta={ penta } />
+                <p className='gen'>
+                    Generation:<br/>
+                    { genNumberRef.current }
+                </p>
+                <ButtonRight 
+                    toad={ toad } 
+                    glider={ glider } 
+                    penta={ penta } 
+                />
             </div>
         </div >
     )

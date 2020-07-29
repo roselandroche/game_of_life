@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/Presets.css';
+import '../css/ButtonBar.css';
 
-function PreSets(props) {
+function ButtonRight(props) {
     const setGlider = () => {
         if(props.running) {
             return
@@ -36,4 +36,4 @@ function PreSets(props) {
     )
 }
 
-export default PreSets
+export default ButtonRight

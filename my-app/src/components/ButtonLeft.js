@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/ButtonBar.css';
 
-function ButtonBar(props) {
+function ButtonLeft(props) {
 
     const startProgram = () => {
         if(!props.running){
@@ -63,4 +63,4 @@ function ButtonBar(props) {
     )
 }
 
-export default ButtonBar
+export default ButtonLeft
