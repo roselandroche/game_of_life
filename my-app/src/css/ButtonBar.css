@@ -5,9 +5,9 @@
 }
 
 .start, .stop, .clear, .step, .random {
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 10px;
     padding: 10px 30px;
-    margin: 20px 40px 50px 60px;
+    margin: 10px 40px 40px 60px;
     font-size: 20px;
 }

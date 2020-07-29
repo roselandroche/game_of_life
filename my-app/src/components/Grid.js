@@ -2,6 +2,7 @@ import React, { useState, useCallback, useRef } from 'react';
 import '../css/Grid.css';
 import produce from 'immer';
 import ButtonBar from './ButtonBar';
+import PreSets from './PreSets';
 
 const numRows = 25;
 const numCol = 25;
@@ -26,6 +27,7 @@ function Grid() {
         return rows;
     })
     const [running, setRunning] = useState(false);
+    const [cellColor] = useState('#FFFFFF');
 
     const runningRef = useRef(running);
     runningRef.current = running;
@@ -131,6 +133,21 @@ function Grid() {
         console.log(genNumberRef);
     }, [])
 
+    const toad = () => {
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                for(let i = 10; i < 13; i++) {
+                    gridCopy[i][10] = 1;
+                }
+                for(let j = 11; j < 12; j++) {
+                    for(let k = 11; k < 14; k++) {
+                        gridCopy[k][j] = 1;
+                    }
+                }
+            })
+        })
+    }
+
     return (
         <div className='main-body'>
             <ButtonBar 
@@ -153,7 +170,7 @@ function Grid() {
                         <div 
                             className='cell' 
                             key={`${i}-${j}`}
-                            style={{backgroundColor: grid[i][j] ? "white": "#2C0A28"}}
+                            style={{backgroundColor: grid[i][j] ? cellColor : "#2C0A28"}}
                             onClick={() => {
                                 const newGrid = produce(grid, gridCopy => {
                                     gridCopy[i][j] = gridCopy[i][j] ? 0 : 1;
@@ -166,14 +183,15 @@ function Grid() {
                             <div 
                                 className='cell' 
                                 key={`${i}-${j}`}
-                                style={{backgroundColor: grid[i][j] ? "white": "#2C0A28"}}
+                                style={{backgroundColor: grid[i][j] ? cellColor : "#2C0A28"}}
                             />
                         )
                     )
                 }
             </div>
-            
-            <p className='gen'>Generation Number:<br/>{ genNumberRef.current }</p>
+
+            <p className='gen'>Generation:<br/>{ genNumberRef.current }</p>
+            <PreSets toad={ toad } />
         </div >
     )
 }
