@@ -9,9 +9,16 @@
     padding: 10px;
 }
 
+a {
+    text-decoration: none;
+    background-color: #2C0A28;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
 .about-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -19,7 +26,6 @@
   
 .home-link {
     color: white;
-    text-decoration: none;
     font-size: 20px;
     text-align: right;
 }
