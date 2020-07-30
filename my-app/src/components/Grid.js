@@ -31,8 +31,11 @@ function Grid() {
     const runningRef = useRef(running);
     runningRef.current = running;
 
-    let genNumber = 0;
-    let genNumberRef = useRef(genNumber);
+    const [genNumber, setGenNumber] = useState(0);
+
+    const updateGen = () => {
+        setGenNumber((genNumber) => genNumber + 1)
+    }
 
     const runGame = useCallback(() => {
         if(!runningRef.current) {
@@ -61,10 +64,7 @@ function Grid() {
                 }
             })
         })
-
-        genNumberRef.current++;
-        console.log(genNumberRef);
-
+        updateGen();
         setTimeout(runGame, 1000)
     }, [])
 
@@ -81,7 +81,7 @@ function Grid() {
                 }
             })
         })
-        genNumberRef.current = 0;
+        setGenNumber(0);
     }
 
     const clearGrid = () => {
@@ -97,7 +97,7 @@ function Grid() {
                 }
             })
         })
-        genNumberRef.current = 0;
+        setGenNumber(0);
     }
 
     const stepThrough = useCallback(() => {
@@ -127,9 +127,7 @@ function Grid() {
                 }
             })
         })
-
-        genNumberRef.current++;
-        console.log(genNumberRef);
+        updateGen();
     }, [])
 
     const toad = () => {
@@ -223,7 +221,7 @@ function Grid() {
             <div className='right-panel'>
                 <p className='gen'>
                     Generation<br/>
-                    { genNumberRef.current }
+                    { genNumber }
                 </p>
                 <ButtonRight 
                     toad={ toad } 
