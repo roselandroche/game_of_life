@@ -9,6 +9,10 @@
     padding: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .about-header {
     display: flex;
     justify-content: space-between;
@@ -19,7 +23,6 @@
   
 .home-link {
     color: white;
-    text-decoration: none;
     font-size: 20px;
     text-align: right;
 }
