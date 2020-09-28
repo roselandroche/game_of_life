@@ -25,6 +25,10 @@ Build Week for Lambda School - Conway's Game of Life
 - I would add more presets for the user to choose from, as well as adding ways for the user to change the
     visual appearance(i.e. colors). I would also like to add the ability to 'jump' to different generations, 
     so the user could see the end result without having to wait for the game to play to that point.
+    
+### Status
+
+- Complete, but with a lot of space for growth
 
 ### Deployment
 
