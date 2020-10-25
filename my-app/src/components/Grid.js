@@ -133,6 +133,11 @@ function Grid() {
     const toad = () => {
         setGrid((currentGrid) => {
             return produce(currentGrid, gridCopy => {
+                for(let i = 0; i < numRows; i++) {
+                    for(let j = 0; j < numCol; j++) {
+                        gridCopy[i][j] = 0;
+                    }
+                }
                 for(let i = 10; i < 13; i++) {
                     gridCopy[i][10] = 1;
                 }
@@ -148,6 +153,11 @@ function Grid() {
     const glider = () => {
         setGrid((currentGrid) => {
             return produce(currentGrid, gridCopy => {
+                for(let i = 0; i < numRows; i++) {
+                    for(let j = 0; j < numCol; j++) {
+                        gridCopy[i][j] = 0;
+                    }
+                }
                 for(let i = 10; i < 13; i++) {
                     gridCopy[i][10] = 1;
                 }
@@ -160,6 +170,11 @@ function Grid() {
     const penta = () => {
         setGrid((currentGrid) => {
             return produce(currentGrid, gridCopy => {
+                for(let i = 0; i < numRows; i++) {
+                    for(let j = 0; j < numCol; j++) {
+                        gridCopy[i][j] = 0;
+                    }
+                }
                 for(let i = 7; i < 9; i++) {
                     gridCopy[10][i] = 1;
                 }
