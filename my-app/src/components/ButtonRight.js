@@ -35,7 +35,7 @@ function ButtonRight(props) {
             <button className='glider' onClick={() => {setGlider()}}>
                 Glider
             </button>
-            <button onClick={() => {setGosper()}}>
+            <button className='gosper' onClick={() => {setGosper()}}>
                 Gosper Glider
             </button>
             <button className='pentadecathlon' onClick={() => {setPent()}}>

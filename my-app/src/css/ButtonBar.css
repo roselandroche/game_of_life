@@ -1,10 +1,9 @@
 .bar, .preset-buttons {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
 }
 
-.start, .stop, .clear, .step, .random, .glider, .toad, .pentadecathlon {
+.start, .stop, .clear, .step, .random, .glider, .toad, .pentadecathlon, .gosper {
     border: 2px solid #2C0A28;
     border-radius: 10px;
     padding: 10px 30px;
