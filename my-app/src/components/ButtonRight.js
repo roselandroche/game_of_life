@@ -20,14 +20,23 @@ function ButtonRight(props) {
         }
         props.penta()
     }
+    const setGosper = () => {
+        if(props.running) {
+            return
+        }
+        props.gosper()
+    }
 
     return (
         <div className='preset-buttons'>
+            <button className='toad' onClick={() => {setToad()}}>
+                Toad
+            </button>
             <button className='glider' onClick={() => {setGlider()}}>
                 Glider
             </button>
-            <button className='toad' onClick={() => {setToad()}}>
-                Toad
+            <button onClick={() => {setGosper()}}>
+                Gosper Glider
             </button>
             <button className='pentadecathlon' onClick={() => {setPent()}}>
                 Pentadecathlon

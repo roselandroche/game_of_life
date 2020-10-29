@@ -4,8 +4,8 @@ import produce from 'immer';
 import ButtonLeft from './ButtonLeft';
 import ButtonRight from './ButtonRight';
 
-const numRows = 25;
-const numCol = 25;
+const numRows = 40;
+const numCol = 40;
 const neighborCells = [
     [0, 1],
     [0, -1],
@@ -180,6 +180,75 @@ function Grid() {
         })
     }
 
+    const gosper = () => {
+        clearGrid()
+        setGrid((currentGrid) => {
+            return produce(currentGrid, gridCopy => {
+                gridCopy[1][24] = 1;
+                gridCopy[1][25] = 1;
+                gridCopy[2][24] = 1;
+                gridCopy[2][26] = 1;
+                gridCopy[3][25] = 1;
+                gridCopy[3][26] = 1;
+                gridCopy[3][27] = 1;
+                gridCopy[3][12] = 1;
+                gridCopy[4][9] = 1;
+                gridCopy[4][10] = 1;
+                gridCopy[4][11] = 1;
+                gridCopy[4][12] = 1;
+                gridCopy[4][16] = 1;
+                gridCopy[4][17] = 1;
+                gridCopy[4][26] = 1;
+                gridCopy[4][27] = 1;
+                gridCopy[4][28] = 1;
+                gridCopy[4][35] = 1;
+                gridCopy[4][36] = 1;
+                gridCopy[5][8] = 1;
+                gridCopy[5][9] = 1;
+                gridCopy[5][10] = 1;
+                gridCopy[5][11] = 1;
+                gridCopy[5][15] = 1;
+                gridCopy[5][16] = 1;
+                gridCopy[5][25] = 1;
+                gridCopy[5][26] = 1;
+                gridCopy[5][27] = 1;
+                gridCopy[5][35] = 1;
+                gridCopy[5][36] = 1;
+                gridCopy[6][1] = 1;
+                gridCopy[6][2] = 1;
+                gridCopy[6][8] = 1;
+                gridCopy[6][11] = 1;
+                gridCopy[6][15] = 1;
+                gridCopy[6][16] = 1;
+                gridCopy[6][18] = 1;
+                gridCopy[6][20] = 1;
+                gridCopy[6][21] = 1;
+                gridCopy[6][24] = 1;
+                gridCopy[6][26] = 1;
+                gridCopy[7][1] = 1;
+                gridCopy[7][2] = 1;
+                gridCopy[7][8] = 1;
+                gridCopy[7][9] = 1;
+                gridCopy[7][10] = 1;
+                gridCopy[7][11] = 1;
+                gridCopy[7][16] = 1;
+                gridCopy[7][18] = 1;
+                gridCopy[7][20] = 1;
+                gridCopy[7][21] = 1;
+                gridCopy[7][24] = 1;
+                gridCopy[7][25] = 1;
+                gridCopy[8][9] = 1;
+                gridCopy[8][10] = 1;
+                gridCopy[8][11] = 1;
+                gridCopy[8][12] = 1;
+                gridCopy[8][16] = 1;
+                gridCopy[8][18] = 1;
+                gridCopy[8][19] = 1;
+                gridCopy[9][12] = 1;
+            })
+        })
+    }
+
     return (
         <div className='main-body'>
             <ButtonLeft 
@@ -230,6 +299,7 @@ function Grid() {
                     toad={ toad } 
                     glider={ glider } 
                     penta={ penta } 
+                    gosper = { gosper }
                 />
             </div>
         </div >

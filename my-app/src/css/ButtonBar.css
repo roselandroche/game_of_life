@@ -1,7 +1,7 @@
 .bar, .preset-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
 }
 
 .start, .stop, .clear, .step, .random, .glider, .toad, .pentadecathlon {

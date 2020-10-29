@@ -8,8 +8,7 @@
 .grid-container {
     display: grid;
     margin: 20px auto;
-    width: 600px;
-
+    width: 900px;
 }
 
 .gen {
@@ -21,9 +20,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 87vh;
-    margin-left: 80px;
-    margin-right: 80px;
     padding-bottom: 50px;
 }
 
