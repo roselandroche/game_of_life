@@ -4,7 +4,7 @@ import produce from 'immer';
 import ButtonLeft from './ButtonLeft';
 import ButtonRight from './ButtonRight';
 
-const numRows = 40;
+const numRows = 25;
 const numCol = 40;
 const neighborCells = [
     [0, 1],
