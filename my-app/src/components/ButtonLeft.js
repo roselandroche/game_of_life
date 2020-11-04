@@ -44,7 +44,7 @@ function ButtonLeft(props) {
     
     return (
         <div className='bar'>
-            <button className='start' onClick={() => {startProgram()}}>
+            <button className='start' onClick={() => {startProgram(); props.updateGen()}}>
                 Start
             </button>
             <button className='step' onClick={() => {stepping()}}>

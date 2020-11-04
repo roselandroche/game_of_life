@@ -34,7 +34,11 @@ function Grid() {
     const [genNumber, setGenNumber] = useState(0);
 
     const updateGen = () => {
-        setGenNumber((genNumber) => genNumber + 1)
+        if(!runningRef.current) {
+            return
+        }
+        setGenNumber((genNumber) => genNumber + 1);
+        setTimeout(updateGen, 1000);
     }
 
     const runGame = useCallback(() => {
@@ -64,7 +68,6 @@ function Grid() {
                 }
             })
         })
-        updateGen();
         setTimeout(runGame, 1000)
     }, [])
 
@@ -255,6 +258,7 @@ function Grid() {
                 running = { running } 
                 setRunning = { setRunning } 
                 runGame = { runGame } 
+                updateGen = { updateGen }
                 runningRef = { runningRef }
                 clearGrid = { clearGrid }
                 stepThrough = { stepThrough }
