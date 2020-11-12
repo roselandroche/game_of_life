@@ -5,10 +5,6 @@
     margin: 1px;
 }
 
-/* .cell:hover {
-    background-color: #5a1452;
-} */
-
 .grid-container {
     display: grid;
     margin: 20px auto;
