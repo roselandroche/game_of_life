@@ -11,9 +11,8 @@
 
 a {
     text-decoration: none;
-    background-color: #2C0A28;
     padding: 10px 20px;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .about-header {
@@ -26,6 +25,14 @@ a {
   
 .home-link {
     color: white;
-    font-size: 20px;
-    text-align: right;
+    text-decoration: none;
+    font-size: 24px;
+    border: 2px solid #2C0A28;
+    padding: 14px 80px;
+    background-color: #2C0A28;
 }
+
+.home-link:hover {
+    background-color: #5a1452;
+    font-weight: bold;
+  }
